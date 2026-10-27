@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Details — CarMarket 2026</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="header-inner">
+            <a href="index.html" class="logo"><span class="logo-icon">◆</span><span class="logo-text">Car<span class="logo-accent">Market</span></span></a>
+            <nav class="nav" id="mainNav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="inventory.html" class="nav-link">Inventory</a>
+                <a href="compare.html" class="nav-link">Compare <span class="compare-badge" id="headerCompareBadge">0</span></a>
+                <a href="index.html#testimonials" class="nav-link">Reviews</a>
+                <a href="profile.html" class="nav-link">Profile</a>
+            </nav>
+            <div class="header-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><span class="theme-icon-dark">☀</span><span class="theme-icon-light">☾</span></button>
+                <a href="profile.html" class="cart-btn" aria-label="Shopping Cart"><span class="cart-icon">🛒</span><span class="cart-count" id="headerCartCount">0</span></a>
+                <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+    <div class="mobile-menu" id="mobileMenu">
+        <nav class="mobile-nav">
+            <a href="index.html" class="mobile-link">Home</a>
+            <a href="inventory.html" class="mobile-link">Inventory</a>
+            <a href="compare.html" class="mobile-link">Compare</a>
+            <a href="index.html#testimonials" class="mobile-link">Reviews</a>
+            <a href="profile.html" class="mobile-link">Profile</a>
+        </nav>
+    </div>
+
+    <section class="details-section">
+        <div class="container">
+            <a href="inventory.html" class="back-link">← Back to Inventory</a>
+            <div class="details-error" id="detailsError" style="display:none;">
+                <div class="empty-icon"></div>
+                <h3>Vehicle Not Found</h3>
+                <p>The car you're looking for doesn't exist or has been removed.</p>
+                <a href="inventory.html" class="btn btn-primary">Browse Inventory</a>
+            </div>
+            <div class="details-content" id="detailsContent" style="display:none;">
+                <div class="details-gallery">
+                    <div class="details-main-image">
+                        <img id="detailsMainImg" src="" alt="" loading="lazy">
+                        <button class="like-btn details-like" id="detailsLike">
+                            <span class="like-heart">♡</span>
+                            <span class="like-count" id="detailsLikeCount">0</span>
+                        </button>
+                        <div class="image-nav">
+                            <button class="img-nav-btn" id="imgPrev">‹</button>
+                            <button class="img-nav-btn" id="imgNext">›</button>
+                        </div>
+                        <div class="image-counter" id="imageCounter">1 / 4</div>
+                    </div>
+                    <div class="details-thumbnails" id="detailsThumbnails"></div>
+                </div>
+                <div class="details-info">
+                    <div class="details-breadcrumb">
+                        <span id="detailsCategory" class="details-category-badge"></span>
+                        <span id="detailsFuel" class="details-fuel-badge"></span>
+                    </div>
+                    <h1 class="details-title" id="detailsTitle"></h1>
+                    <p class="details-year" id="detailsYear"></p>
+                    <div class="details-price" id="detailsPrice"></div>
+                    <p class="details-description" id="detailsDescription"></p>
+                    <div class="details-specs">
+                        <h3>Specifications</h3>
+                        <div class="specs-grid">
+                            <div class="spec-item"><span class="spec-label">Engine</span><span class="spec-value" id="specEngine"></span></div>
+                            <div class="spec-item"><span class="spec-label">Horsepower</span><span class="spec-value" id="specHP"></span></div>
+                            <div class="spec-item"><span class="spec-label">Transmission</span><span class="spec-value" id="specTransmission"></span></div>
+                            <div class="spec-item"><span class="spec-label">Drivetrain</span><span class="spec-value" id="specDrivetrain"></span></div>
+                            <div class="spec-item"><span class="spec-label">Mileage</span><span class="spec-value" id="specMileage"></span></div>
+                            <div class="spec-item"><span class="spec-label">Fuel</span><span class="spec-value" id="specFuel"></span></div>
+                            <div class="spec-item"><span class="spec-label">Exterior Color</span><span class="spec-value" id="specExterior"></span></div>
+                            <div class="spec-item"><span class="spec-label">Interior Color</span><span class="spec-value" id="specInterior"></span></div>
+                        </div>
+                    </div>
+                    <div class="details-actions">
+                        <button class="btn btn-primary btn-lg" id="detailsAddToCart">🛒 Add to Cart</button>
+                        <button class="btn btn-outline btn-lg" id="detailsCompare">⚖️ Compare</button>
+                    </div>
+                </div>
+            </div>
+            <div class="similar-section" id="similarSection" style="display:none;">
+                <h2 class="section-title">Similar Vehicles</h2>
+                <div class="featured-grid" id="similarGrid"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand"><a href="index.html" class="logo"><span class="logo-icon">◆</span><span class="logo-text">Car<span class="logo-accent">Market</span></span></a><p>The premium automotive marketplace of 2026.</p><div class="footer-socials"><a href="#" class="social-link">𝕏</a><a href="#" class="social-link"></a><a href="#" class="social-link">▶</a><a href="#" class="social-link">in</a></div></div>
+                <div class="footer-links"><h4>Pages</h4><a href="index.html">Home</a><a href="inventory.html">Inventory</a><a href="compare.html">Compare</a><a href="index.html#testimonials">Reviews</a><a href="profile.html">Profile</a></div>
+                <div class="footer-links"><h4>Categories</h4><a href="inventory.html?category=Sports">Sports</a><a href="inventory.html?category=Luxury">Luxury</a><a href="inventory.html?category=Electric">Electric</a><a href="inventory.html?category=SUV">SUV</a><a href="inventory.html?category=Sedan">Sedan</a></div>
+                <div class="footer-contact"><h4>Contact</h4><p>📧 hello@carmarket.com</p><p>📞 +1 (555) 0123-456</p><p>📍 123 Auto Drive, New York</p></div>
+            </div>
+            <div class="footer-bottom"><p>© 2026 CarMarket. All rights reserved.</p><p>Crafted with precision for automotive enthusiasts.</p></div>
+        </div>
+    </footer>
+    <script src="./app.js"></script>
+</body>
+</html>

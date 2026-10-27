@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory — CarMarket 2026</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="header-inner">
+            <a href="index.html" class="logo"><span class="logo-icon">◆</span><span class="logo-text">Car<span class="logo-accent">Market</span></span></a>
+            <nav class="nav" id="mainNav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="inventory.html" class="nav-link active">Inventory</a>
+                <a href="compare.html" class="nav-link">Compare <span class="compare-badge" id="headerCompareBadge">0</span></a>
+                <a href="index.html#testimonials" class="nav-link">Reviews</a>
+                <a href="profile.html" class="nav-link">Profile</a>
+            </nav>
+            <div class="header-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><span class="theme-icon-dark">☀</span><span class="theme-icon-light">☾</span></button>
+                <a href="profile.html" class="cart-btn" aria-label="Shopping Cart"><span class="cart-icon">🛒</span><span class="cart-count" id="headerCartCount">0</span></a>
+                <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+    <div class="mobile-menu" id="mobileMenu">
+        <nav class="mobile-nav">
+            <a href="index.html" class="mobile-link">Home</a>
+            <a href="inventory.html" class="mobile-link active">Inventory</a>
+            <a href="compare.html" class="mobile-link">Compare</a>
+            <a href="index.html#testimonials" class="mobile-link">Reviews</a>
+            <a href="profile.html" class="mobile-link">Profile</a>
+        </nav>
+    </div>
+
+    <section class="page-hero">
+        <div class="container">
+            <span class="section-tag">Browse Collection</span>
+            <h1 class="page-title">Our Inventory</h1>
+            <p class="page-desc">Explore our curated selection of premium vehicles from the world's top brands.</p>
+        </div>
+    </section>
+
+    <section class="inventory-section">
+        <div class="container">
+            <div class="inventory-layout">
+                <aside class="filters-sidebar" id="filtersSidebar">
+                    <div class="filters-header"><h3>Filters</h3><button class="btn btn-text" id="clearFilters">Clear All</button></div>
+                    <div class="filter-group"><label class="filter-label">Search</label><input type="text" class="filter-input" id="filterSearch" placeholder="Search cars..."></div>
+                    <div class="filter-group"><label class="filter-label">Brand</label><select class="filter-select" id="filterBrand"><option value="">All Brands</option></select></div>
+                    <div class="filter-group"><label class="filter-label">Category</label><select class="filter-select" id="filterCategory"><option value="">All Categories</option><option value="Sports">Sports</option><option value="Luxury">Luxury</option><option value="Electric">Electric</option><option value="SUV">SUV</option><option value="Coupe">Coupe</option><option value="Sedan">Sedan</option></select></div>
+                    <div class="filter-group"><label class="filter-label">Fuel Type</label><select class="filter-select" id="filterFuel"><option value="">All Fuel Types</option><option value="Electric">Electric</option><option value="Hybrid">Hybrid</option><option value="Gasoline">Gasoline</option><option value="Diesel">Diesel</option></select></div>
+                    <div class="filter-group"><label class="filter-label">Transmission</label><select class="filter-select" id="filterTransmission"><option value="">All</option><option value="Automatic">Automatic</option><option value="Manual">Manual</option></select></div>
+                    <div class="filter-group"><label class="filter-label">Price Range</label><div class="price-range-inputs"><input type="number" class="filter-input" id="filterMinPrice" placeholder="Min $"><input type="number" class="filter-input" id="filterMaxPrice" placeholder="Max $"></div></div>
+                    <div class="filter-group"><label class="filter-label">Sort By</label><select class="filter-select" id="filterSort"><option value="default">Default</option><option value="price-asc">Price: Low to High</option><option value="price-desc">Price: High to Low</option><option value="year-desc">Year: Newest</option><option value="year-asc">Year: Oldest</option><option value="hp-desc">Horsepower: High</option><option value="likes-desc">Most Liked</option></select></div>
+                </aside>
+
+                <div class="inventory-main">
+                    <div class="inventory-toolbar"><span class="results-count" id="resultsCount">0 vehicles found</span><button class="filter-toggle-mobile" id="filterToggleMobile">☰ Filters</button></div>
+                    <div class="inventory-grid" id="inventoryGrid"></div>
+                    <div class="empty-state" id="emptyState" style="display:none;">
+                        <div class="empty-icon"></div>
+                        <h3>No vehicles found</h3>
+                        <p>Try adjusting your filters to see more results.</p>
+                        <button class="btn btn-primary" id="emptyClearFilters">Clear Filters</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand"><a href="index.html" class="logo"><span class="logo-icon">◆</span><span class="logo-text">Car<span class="logo-accent">Market</span></span></a><p>The premium automotive marketplace of 2026.</p><div class="footer-socials"><a href="#" class="social-link">𝕏</a><a href="#" class="social-link">📷</a><a href="#" class="social-link">▶</a><a href="#" class="social-link">in</a></div></div>
+                <div class="footer-links"><h4>Pages</h4><a href="index.html">Home</a><a href="inventory.html">Inventory</a><a href="compare.html">Compare</a><a href="index.html#testimonials">Reviews</a><a href="profile.html">Profile</a></div>
+                <div class="footer-links"><h4>Categories</h4><a href="inventory.html?category=Sports">Sports</a><a href="inventory.html?category=Luxury">Luxury</a><a href="inventory.html?category=Electric">Electric</a><a href="inventory.html?category=SUV">SUV</a><a href="inventory.html?category=Sedan">Sedan</a></div>
+                <div class="footer-contact"><h4>Contact</h4><p>📧 hello@carmarket.com</p><p>📞 +1 (555) 0123-456</p><p>📍 123 Auto Drive, New York</p></div>
+            </div>
+            <div class="footer-bottom"><p>© 2026 CarMarket. All rights reserved.</p><p>Crafted with precision for automotive enthusiasts.</p></div>
+        </div>
+    </footer>
+    <script src="./app.js"></script>
+</body>
+</html>

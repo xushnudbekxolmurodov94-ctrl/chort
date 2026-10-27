@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Car Compare — CarMarket 2026</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="header-inner">
+            <a href="index.html" class="logo"><span class="logo-icon">◆</span><span class="logo-text">Car<span class="logo-accent">Market</span></span></a>
+            <nav class="nav" id="mainNav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="inventory.html" class="nav-link">Inventory</a>
+                <a href="compare.html" class="nav-link active">Compare <span class="compare-badge" id="headerCompareBadge">0</span></a>
+                <a href="index.html#testimonials" class="nav-link">Reviews</a>
+                <a href="profile.html" class="nav-link">Profile</a>
+            </nav>
+            <div class="header-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><span class="theme-icon-dark">☀</span><span class="theme-icon-light">☾</span></button>
+                <a href="profile.html" class="cart-btn" aria-label="Shopping Cart"><span class="cart-icon">🛒</span><span class="cart-count" id="headerCartCount">0</span></a>
+                <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+    <div class="mobile-menu" id="mobileMenu">
+        <nav class="mobile-nav">
+            <a href="index.html" class="mobile-link">Home</a>
+            <a href="inventory.html" class="mobile-link">Inventory</a>
+            <a href="compare.html" class="mobile-link active">Compare</a>
+            <a href="index.html#testimonials" class="mobile-link">Reviews</a>
+            <a href="profile.html" class="mobile-link">Profile</a>
+        </nav>
+    </div>
+
+    <section class="page-hero">
+        <div class="container">
+            <span class="section-tag">Smart Tool</span>
+            <h1 class="page-title">Compare Cars</h1>
+            <p class="page-desc">Select 2–3 vehicles to compare side by side. We'll help you decide.</p>
+        </div>
+    </section>
+
+    <section class="compare-section">
+        <div class="container">
+            <div class="compare-controls">
+                <button class="btn btn-outline" id="clearCompare">✕ Clear Comparison</button>
+                <button class="btn btn-primary" id="addMoreCars">+ Add Car to Compare</button>
+            </div>
+            <div class="compare-empty" id="compareEmpty">
+                <div class="empty-icon">⚖️</div>
+                <h3>No cars selected for comparison</h3>
+                <p>Browse our inventory and add cars to compare them side by side.</p>
+                <a href="inventory.html" class="btn btn-primary">Browse Inventory</a>
+            </div>
+            <div class="compare-table-wrapper" id="compareTableWrapper" style="display:none;">
+                <div class="compare-table" id="compareTable"></div>
+            </div>
+            <div class="smart-recommendation" id="smartRecommendation" style="display:none;">
+                <h3 class="recommendation-title">💡 Smart Recommendation</h3>
+                <div class="recommendation-content" id="recommendationContent"></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal" id="addCarModal">
+        <div class="modal-overlay" id="modalOverlay"></div>
+        <div class="modal-content">
+            <div class="modal-header"><h3>Select a Car to Compare</h3><button class="modal-close" id="modalClose">✕</button></div>
+            <div class="modal-body">
+                <input type="text" class="filter-input" id="modalSearch" placeholder="Search cars...">
+                <div class="modal-car-grid" id="modalCarGrid"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand"><a href="index.html" class="logo"><span class="logo-icon">◆</span><span class="logo-text">Car<span class="logo-accent">Market</span></span></a><p>The premium automotive marketplace of 2026.</p><div class="footer-socials"><a href="#" class="social-link">𝕏</a><a href="#" class="social-link">📷</a><a href="#" class="social-link">▶</a><a href="#" class="social-link">in</a></div></div>
+                <div class="footer-links"><h4>Pages</h4><a href="index.html">Home</a><a href="inventory.html">Inventory</a><a href="compare.html">Compare</a><a href="index.html#testimonials">Reviews</a><a href="profile.html">Profile</a></div>
+                <div class="footer-links"><h4>Categories</h4><a href="inventory.html?category=Sports">Sports</a><a href="inventory.html?category=Luxury">Luxury</a><a href="inventory.html?category=Electric">Electric</a><a href="inventory.html?category=SUV">SUV</a><a href="inventory.html?category=Sedan">Sedan</a></div>
+                <div class="footer-contact"><h4>Contact</h4><p> hello@carmarket.com</p><p> +1 (555) 0123-456</p><p> 123 Auto Drive, New York</p></div>
+            </div>
+            <div class="footer-bottom"><p>© 2026 CarMarket. All rights reserved.</p><p>Crafted with precision for automotive enthusiasts.</p></div>
+        </div>
+    </footer>
+    <script src="./app.js"></script>
+</body>
+</html>
